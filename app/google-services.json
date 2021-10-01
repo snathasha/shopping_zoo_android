@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "294927261725",
+    "firebase_url": "https://easy-shopping-bee0b-default-rtdb.firebaseio.com",
+    "project_id": "easy-shopping-bee0b",
+    "storage_bucket": "easy-shopping-bee0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294927261725:android:6910827215ee3c9531e6f4",
+        "android_client_info": {
+          "package_name": "com.android.shoppingzoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294927261725-c9eochm3jehmv3rbpdofggdt6s8hk4os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcLpeg8HBvdc1wv1Q8oy7h14ki4KUgdpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294927261725-c9eochm3jehmv3rbpdofggdt6s8hk4os.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
