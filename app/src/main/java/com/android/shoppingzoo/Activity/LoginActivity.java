@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "signupTag";
     String userEmail, userPass;
     private EditText email, pass;
-    private TextView forgetPass;
+    private TextView forgetPass,loginResultTv;
     private AppCompatButton loginBtn;
     private Button didNotHaveAcc;
     private ImageView adminLogin;
@@ -130,6 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+                                        loginResultTv.setText("pass");
                                         //sign in Success
                                         String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
                                         myRootRef.child("Users").child(currentUserId).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -160,6 +161,7 @@ public class LoginActivity extends AppCompatActivity {
                                             }
                                         });
                                     } else {
+                                        loginResultTv.setText("fail");
                                         progressBar.setVisibility(View.GONE);
                                         loginBtn.setEnabled(true);
                                         loginBtn.setVisibility(View.VISIBLE);
@@ -240,6 +242,7 @@ public class LoginActivity extends AppCompatActivity {
         pass = findViewById(R.id.login_pass);
         loginBtn = findViewById(R.id.login_btn);
         adminLogin = findViewById(R.id.manager_portal_btn);
+        loginResultTv = findViewById(R.id.login_results);
 
         didNotHaveAcc = findViewById(R.id.login_signup_btn);
         progressBar = findViewById(R.id.login_progress_bar);
